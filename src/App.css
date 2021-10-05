@@ -1,0 +1,46 @@
+.App {
+  text-align: center;
+  background-image: url('./Assets/swordbg.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  min-height: 250vh;
+  flex-direction: row;
+  font-size: calc(8px + 2vmin);
+  color: black;
+  font-family: 'Average', sans-serif;
+
+}
+
+form{
+
+  align-items: left;
+  margin: 70px; 
+  margin-top: 100px;
+  padding: 20px 20px 20px 5px;
+  text-align: center;
+  flex-direction: row
+
+
+}
+
+input{
+  align-items: center;
+}
+
+a{
+font-size: 10px;
+margin: 10px;
+color: rgb(255, 0, 0);
+cursor: pointer;
+user-select: none;
+text-decoration-line: underline;
+
+}
+
+button{
+  margin: 20px;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5em;
+}
+
