@@ -47,8 +47,9 @@ const Gear = (props) => {
       flexDirection: 'row',
       fontSize: '22px',
       position: 'absolute',
-      top: '1200px',
-      height: '400'
+      top: '1300px',
+      height: '400',
+      marginLeft: '600px'
       
       
   

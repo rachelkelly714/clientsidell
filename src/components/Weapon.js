@@ -43,7 +43,10 @@ const Weapon = (props) => {
       flexDirection: 'row',
       fontSize: '22px',
       display: 'inline',
-      float: 'left'
+      float: 'left',
+      marginRight: '150px'
+      
+  
   }
 
 

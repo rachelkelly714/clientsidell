@@ -4,12 +4,10 @@ import { Col, Row, Form, FormGroup, Label, Input } from 'reactstrap';
 
 
 
+
 const Charinfo = (props) => {
 
-    
-
-
-
+  
 
     const inputStyles = {
 
@@ -47,7 +45,8 @@ const Charinfo = (props) => {
       alignItems: 'center',
       flexDirection: 'row',
       fontSize: '22px',
-      top: '150px'
+      top: '150px',
+    
 
       
   

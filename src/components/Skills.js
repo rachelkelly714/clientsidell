@@ -37,7 +37,7 @@ const Skills = (props) => {
         display: 'inline',
         float: 'right',
         position: 'absolute',
-        left: '1150px'
+        left: '1250px'
      
 
     }

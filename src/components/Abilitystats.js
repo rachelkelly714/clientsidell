@@ -2,7 +2,7 @@ import './Assets/Ability.css'
 
 import { Col, Row, Form, FormGroup, Label, Input } from 'reactstrap';
 
-const AbilityStats = (props) => {
+const Abilitystats = (props) => {
 
     const inputStyles = {
 
@@ -52,19 +52,17 @@ const AbilityStats = (props) => {
   
   
   }
-
-
   return (
     <Form style = {formStyles}>
         <p>Ability Stats</p>
       <Row>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyles} for="strength">Strength</Label>
             <Input style = {inputStyles}  name="strength" id="strength"/>
           </FormGroup>
         </Col>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyle} for="strMod">Str Modifier</Label>
             <Input style ={inputStyle}  name="strMod" id="strMod"/>
@@ -73,13 +71,13 @@ const AbilityStats = (props) => {
       </Row>
       
       <Row>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyles} for="dexterity">Dexterity</Label>
             <Input style = {inputStyles}   name="dex" id="dex"/>
           </FormGroup>
         </Col>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyle} for="dexterityMod">Dex Modifier</Label>
             <Input style = {inputStyle}   name="dexMod" id="dexMod"/>
@@ -88,13 +86,13 @@ const AbilityStats = (props) => {
         </Row>
      
         <Row>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyles} for="constitution">Constitution</Label>
             <Input style = {inputStyles}  name="constitution" id="constitution"/>
           </FormGroup>
         </Col>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyle} for="constitution modifier">Con Modifier</Label>
             <Input style = {inputStyle}   name="conMod" id="conMod"/>
@@ -103,13 +101,13 @@ const AbilityStats = (props) => {
         </Row>
    
         <Row>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label  style={labelStyles} for="intelligence">Intelligence</Label>
             <Input style = {inputStyles}   name="intelligence" id="intelligence"/>
           </FormGroup>
         </Col>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyle} for="intelligence Modifier">Int Modifier</Label>
             <Input style = {inputStyle}   name="intMod" id="intMod"/>
@@ -118,13 +116,13 @@ const AbilityStats = (props) => {
         </Row>
   
         <Row>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyles} for="wisdom">Wisdom</Label>
             <Input style = {inputStyles}   name="wisdom" id="wisdom"/>
           </FormGroup>
         </Col>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyle} for="wisdom modifier">Wis Modifier</Label>
             <Input style = {inputStyle}   name="wisMod" id="wisMod"/>
@@ -133,13 +131,13 @@ const AbilityStats = (props) => {
         </Row>
       
         <Row>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyles} for="charisma">Charisma</Label>
             <Input style = {inputStyles}   name="charisma" id="charisma"/>
           </FormGroup>
         </Col>
-        <Col md={2}>
+        <Col md={3}>
           <FormGroup>
             <Label style={labelStyle} for="charisma modifier">Chr Modifier</Label>
             <Input style = {inputStyle}   name="chrMod" id="chrMod"/>
@@ -151,4 +149,4 @@ const AbilityStats = (props) => {
   );
 }
 
-export default AbilityStats;
+export default Abilitystats;

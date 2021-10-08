@@ -4,10 +4,7 @@ import { Col, Row, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Spells = (props) => {
 
-    
-
-
-
+  
 
     const inputStyles = {
 
@@ -44,7 +41,7 @@ const Spells = (props) => {
       opacity: '.8',
       alignItems: 'center',
       flexDirection: 'row',
-      fontSize: '22px'
+  
       
   
   

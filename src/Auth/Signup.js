@@ -1,4 +1,5 @@
-import { useState } from "react";
+import { useState,} from "react";
+
 
 
 import{Input, Form} from 'reactstrap'; 
@@ -15,7 +16,7 @@ function Signup({username, password, setUsername, setPassword, toggle, submitFor
 
     const handleSubmit = (event) => {
         event.preventDefault();
-        fetch("http://localhost:3000/user/register", { 
+        fetch("http://localhost:5500/user/create", { 
             method: 'POST',
             body: JSON.stringify({user:{username: username, password: password}}),
             headers: new Headers({
@@ -68,6 +69,7 @@ function Signup({username, password, setUsername, setPassword, toggle, submitFor
         padding: '20px 20px 20px 5px',
         borderRadius: '2em',
         opacity: '0.6',
+        marginLeft: '600px'
     }
 
     const pstyle = {
@@ -82,11 +84,11 @@ function Signup({username, password, setUsername, setPassword, toggle, submitFor
 
 return(
     <>
-<Form onSubmit={handleSubmit} style={formStyles} >
+<Form onSubmit={handleSubmit} style={formStyles} type="form" >
 <p style={pstyle}>{noMatch}</p>
 <h1>Sign Up</h1>
 
-<label>Username: </label>
+<label>Username*: </label>
 <Input required type='username' style={inputStyle} placeholder={username} valid={usernameValid} invalid={!usernameValid} onChange={(e)=>{setUsername(e.target.value)
 if  (e.target.value.includes('@') && e.target.value.includes('.')) {
     setUsernameValid(true)
@@ -129,9 +131,11 @@ if  (e.target.value.includes('@') && e.target.value.includes('.')) {
 
                             }}
                         />
-<button style={buttonStyles} type="button"  onClick = {confirmAndSend}>Sign me up!</button>
+<button style={buttonStyles} type="submit"  onClick = {confirmAndSend} onSubmit={handleSubmit}>Sign me up!</button>
 <button style={buttonStyle}  onClick={toggle}>Already have an account?</button>
+<p style={pstyle}>*Please use a valid email address</p>
 </Form>
+
 </>
 )
 

@@ -1,13 +1,11 @@
-import {useState} from 'react';
-
 import Login from './Login';
 import Signup from './Signup';
+import {useState} from 'react'
 
 
 
-
-function Portal (){
-  const [showLogin, setShowLogin] = useState(true)
+const Auth = (props) => {
+    const [showLogin, setShowLogin] = useState(true)
   const [username, setUsername] = useState()
   const [password, setPassword] = useState()
   
@@ -17,19 +15,21 @@ function Portal (){
   const submitForm = () => {
     alert(`Welcome ${username}!`) }
     
-   
-
-return (
-    <>
-     {showLogin 
+            return(
+                <>
+           
+            {showLogin 
        ? <Login 
+       updateToken={props.updateToken}
        username = {username}
        setPassword ={setPassword}
        setUsername ={setUsername}
        toggle={toggleLS}
        submitForm={submitForm}
+   
          />
        : <Signup
+       updateToken={props.updateToken}
        username = {username}
        password= {password}
        setPassword ={setPassword}
@@ -38,12 +38,9 @@ return (
        submitForm={submitForm}
        />
       }
-     
-      
-    </>
-)
-
-
+        
+        </>
+    )
 }
 
-export default Portal;
+export default Auth;
