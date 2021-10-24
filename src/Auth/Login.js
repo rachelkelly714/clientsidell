@@ -1,112 +1,62 @@
-import { useState,} from "react";
+import React, {useState} from 'react';
+import {Form, FormGroup, Label, Input, Button} from 'reactstrap'; 
+import './Portal.css'
 
+const Login= (props) => {
+    const [username, setUsername] = useState(''); 
+    const [password, setPassword] = useState('');
 
-
-import{Input, Form} from 'reactstrap'; 
-
-
-
-
-function Signup({username, password, setUsername, setPassword, toggle, submitForm, props, }){
-    const [confirmPassword, setConfirmPassword] = useState()
-    const [usernameValid, setUsernameValid] = useState(false);
-    const [passwordValid, setPasswordValid] = useState(false);
-    const [confirmPasswordValid, setConfirmPasswordValid] = useState(false);
-    const [noMatch, setNoMatch ] = useState("")
-
-    const handleSubmit = (event) => {
-        event.preventDefault();
-        fetch("http://localhost:5500/user/create", { 
+    let handleSubmit= (event) => {
+        event.preventDefault()
+        fetch("http://localhost:5500/user/login", {
             method: 'POST',
-            body: JSON.stringify({user:{username: username, password: password}}),
+            body: JSON.stringify({user:{username:username, password:password}}),
             headers: new Headers({
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/JSON'
             })
         }).then(
             (response) => response.json()
         ).then((data) => {
-            props.updateToken(data.sessionToken)
+            props.updateToken(data.SessionToken)
         })
     }
-   
-    const buttonStyle = {
-        margin: '20px',
-        padding: '3px, 12px, 3px, 10px',
-        borderRadius: '2em',
-        fontSize: '15px',
-        color: 'rgba(217, 30, 24, 1)'
 
-    }
-
-    const buttonStyles = {
-        margin: '20px',
-        padding: '3px, 12px, 3px, 10px',
-        borderRadius: '2em',
-        alignItems: 'center',
-        textAlign: 'center',
-        
-
-    }
-
-    const inputStyle = {
-        borderRadius: '2em',
-        opacity: '.8',
-     
-    }
-    const formStyles = {
-        backgroundColor: 'white',
-        width: '300px',
-        padding: '20px 20px 20px 5px',
-        borderRadius: '2em',
-        opacity: '0.6',
-        marginLeft: '600px'
-    }
-
-    const pstyle = {
-        color: 'red', 
-        fontWeight: 'bold',
-        textAlign: 'center',
-        margin: '3px'
-    }
-
-    
-    
-
-return(
-    <>
-<Form onSubmit={handleSubmit} style={formStyles} type="form" >
-<p style={pstyle}>{noMatch}</p>
-<h1>Login</h1>
-
-<label>Username: </label>
-<Input required type='username' style={inputStyle} placeholder={username} valid={usernameValid} invalid={!usernameValid} onChange={(e)=>{setUsername(e.target.value)
-if  (e.target.value.includes('@') && e.target.value.includes('.')) {
-    setUsernameValid(true)
-} else {
-    setUsernameValid(false)
+const formStyles = {
+    backgroundColor: 'rgb(248, 244, 239)',
+    margin: '70px',
+  marginTop: '100px',
+  padding: '20px 20px 20px 5px',
+  textAlign: 'center',
+  FlexDirection: 'row',
 }
-}}/>
+
+const buttonStyles = {
+    margin: '20px',
+    padding: '3px 10px 3px 10px',
+    borderRadius: '5em',
+}
 
 
-<br />
-
-<label htmlFor='password'>Password: </label>
-<Input id='password' style={inputStyle} type='password' invalid={!passwordValid} valid={passwordValid} onChange={(e) => {
-                        setPassword(e.target.value)
-                      
-                    }} />
-
-
-
-
-<button style={buttonStyles} type="submit" onSubmit={handleSubmit}>Login</button>
-<button style={buttonStyle}  onClick={toggle}>Don't have an account?</button>
+return (
+<div>
+<Form style={formStyles} onSubmit={handleSubmit}>
+<h1>Login</h1>
+<FormGroup>
+<Label htmlFor="username">Username</Label>
+<Input onChange={(e) => setUsername(e.target.value)} name="username" value={username}/> 
+</FormGroup>
+<FormGroup>
+<Label htmlFor="password">Password</Label>
+<Input onChange={(e) =>setPassword(e.target.value)} name="password" value={password}/>
+</FormGroup>
+<Button styles={buttonStyles} type="submit">Login</Button>
 </Form>
+</div>
 
-</>
 )
 
 }
 
 
-export default Signup;
+
+export default Login; 

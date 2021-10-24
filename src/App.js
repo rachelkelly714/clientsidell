@@ -1,81 +1,54 @@
-//Assets
-// import './components/Portal.css';
+import React, {useState, useEffect} from 'react';
+import background from "./Assets/swordbg.jpg";
 import './App.css';
-import 'bootstrap/dist/css/bootstrap.min.css';
-import { BrowserRouter as Router, Route, Switch, Link, Redirect } from 'react-router-dom';
-import { useState, useEffect } from 'react';
 
 
-
-
-
-
-//Components
-import Portal from './Auth/Portal'; 
-import Home from './components/Home'
+/*Components*/ 
+import Sitebar from './components/Navbar';
+import Auth from './Auth/Auth';
+import Charinfo from './components/Charinfo';
 import Charactersheet from './components/Charactersheet';
-import Join from './components/Gmcampaignlist';
-import Navigation from './components/Navigation';
-import UrCharacters from './components/UrCharacters';
-import Oberon from './components/Oberon'
+
+
 
 
 function App() {
 
-  const [sessionToken, setSessionToken] = useState('');
-
-  useEffect(() => {
+  const [sessionToken, setSessionToken] = useState(localStorage.getItem('token')?localStorage.getItem('token') : null )
+useEffect(() => {
     if(localStorage.getItem('token')){
-      setSessionToken(localStorage.getItem('token'));
+        setSessionToken(localStorage.getItem('token'));
     }
-  }, [])
+}, [])
 
-  const updateToken = (newToken) => {
+const updateToken = (newToken) => {
     localStorage.setItem('token', newToken);
     setSessionToken(newToken);
-    console.log(sessionToken);
+    console.log(newToken); 
+  }
+  
+  const clearToken = () => {
+    localStorage.clear();
+    setSessionToken('');
   }
 
+const protectedViews = () => { 
+  return (sessionToken === localStorage.getItem('token') ? <Charactersheet token={sessionToken}/> : <Auth updateToken={updateToken}/>)
+}
+
+// const protectedViewsGear = () => { 
+//   return (sessionToken === localStorage.getItem('token') ? <Gear token={sessionToken}/> : <Auth updateToken={updateToken}/>)
+// }
 
 
   return (
-  
-    <Router>
-    <div className="App">
-    <Navigation />
-  
-    <Switch>
-       <Route path="/" exact>
-         <Home />
-       </Route>
-       <Route path="/Charactersheet" exact>
-         <Charactersheet />
-       </Route>
-       <Route path="/Gmcampaignlist" exact>
-         <Join />
-         </Route>
-         <Route path="/Portal" exact>
-           <Portal />
-           </Route>
-           <Route path="/Portal" exact>
-           <Portal />
-           </Route>
-           <Route path="/UrCharacters" exact>
-           <UrCharacters />
-             </Route>
-             <Route path="/Oberon" exact>
-           <Oberon />
-             </Route>
-       <Redirect to="/" />
-       </Switch>
-
-
+    <div style={{backgroundImage: `url(${background})`}} >
+      
+     <Sitebar clickLogout={clearToken} />
+     {protectedViews()}
+     
     </div>
-       </Router>
-
- 
-)
-
+  );
 }
 
 export default App;

@@ -1,28 +1,27 @@
-form{
-    background-color: white;
-    width: 300px;
-    padding: 20px 20px 20px 5px;
-    border-radius: 2em;
-    opacity: 0.6;
+Form{
+
+  align-items: center;
+  margin: 70px; 
+  margin-top: 100px;
+  padding: 20px 20px 20px 5px;
+  text-align: center;
+  flex-direction: row;
+  background-color: rgb(248, 244, 239);
+  font-family: 'Balthazar', serif; 
+  
+
+
+}
+
+button{
+  margin: 20px;
+  padding: 3px 10px 3px 10px;
+  border-radius: 5em;
+   
+}
+  
+  input{
     align-items: center;
-    margin-left: 400px;
-    position: absolute
-  
-  
-  }
-  
-  a{
-  font-size: 10px;
-  margin: 10px;
-  color: rgb(255, 0, 0);
-  cursor: pointer;
-  user-select: none;
-  text-decoration-line: underline;
-  
-  }
-  
-  button{
-    margin: 20px;
-    padding: 3px 10px 3px 10px;
-    border-radius: 3em;
+    padding: 20px 20px 20px 5px;
+    margin-left: 10px;
   }

@@ -1,46 +1,42 @@
-import Login from './Login';
+import {Container, Row, Col} from 'reactstrap'; 
+import './Portal.css';
+
+
+
+
+
+
+/*Components*/
 import Signup from './Signup';
-import {useState} from 'react'
+import Login from './Login';
 
 
 
-const Auth = (props) => {
-    const [showLogin, setShowLogin] = useState(true)
-  const [username, setUsername] = useState()
-  const [password, setPassword] = useState()
-  
-  const toggleLS = () => {
-    setShowLogin(!showLogin)
-  }
-  const submitForm = () => {
-    alert(`Welcome ${username}!`) }
-    
-            return(
-                <>
-           
-            {showLogin 
-       ? <Login 
-       updateToken={props.updateToken}
-       username = {username}
-       setPassword ={setPassword}
-       setUsername ={setUsername}
-       toggle={toggleLS}
-       submitForm={submitForm}
-   
-         />
-       : <Signup
-       updateToken={props.updateToken}
-       username = {username}
-       password= {password}
-       setPassword ={setPassword}
-       setUsername ={setUsername}
-       toggle={toggleLS}
-       submitForm={submitForm}
-       />
-      }
-        
-        </>
-    )
+
+
+const Auth = (props) =>{
+
+
+return (
+  <div >
+    <Container className="auth-container">
+    <Row>
+        <Col md="6">
+            <Signup updateToken={props.updateToken} />
+        </Col>
+        <Col md="6" className="login-col">
+            <Login updateToken={props.updateToken} />
+        </Col>
+    </Row>
+
+
+
+
+
+    </Container>
+ 
+    </div>
+)
 }
 
 export default Auth;

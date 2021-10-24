@@ -46,7 +46,7 @@ const Skills = (props) => {
 
     return (
       <div>
-         <Form style={formStyles}>
+         <Form>
              <Row>
          <p>Skills</p>
         <InputGroup style={ipt}>
@@ -54,151 +54,151 @@ const Skills = (props) => {
           <InputGroupAddon addonType="prepend">
           
             <InputGroupText>
-            <Label for="character name" styles={labelStyles}>Athletics</Label>
+            <Label for="character name">Athletics</Label>
               <Input  addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Acrobatics</Label>
+        <Label for="character name">Acrobatics</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Sleight of Hand</Label>
+        <Label for="character name">Sleight of Hand</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Stealth</Label>
+        <Label for="character name">Stealth</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Arcana</Label>
+        <Label for="character name">Arcana</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>History</Label>
+        <Label for="character name">History</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Investigation</Label>
+        <Label for="character name">Investigation</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Nature</Label>
+        <Label for="character name">Nature</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Religon</Label>
+        <Label for="character name">Religon</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Animal Handling</Label>
+        <Label for="character name">Animal Handling</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Insight</Label>
+        <Label for="character name">Insight</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Medicine</Label>
+        <Label for="character name">Medicine</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Survival</Label>
+        <Label for="character name">Survival</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Deception</Label>
+        <Label for="character name">Deception</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Intimidation</Label>
+        <Label for="character name">Intimidation</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Performance</Label>
+        <Label for="character name">Performance</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>
           <Input placeholder="prof + mods" />
         </InputGroup>
-        <InputGroup style={ipt}>
+        <InputGroup>
           <InputGroupAddon addonType="prepend">
             <InputGroupText>
-        <Label for="character name" styles={labelStyles}>Persuasion</Label>
+        <Label for="character name">Persuasion</Label>
               <Input addon type="checkbox" aria-label="Checkbox for following text input" />
             </InputGroupText>
           </InputGroupAddon>

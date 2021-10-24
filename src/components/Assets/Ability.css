@@ -1,5 +1,5 @@
-form{
-    background-color: rgb(243, 42, 7);
+.Form{
+    background-color: rgb(243, 42, 7,.5);
     width: 500px;
     padding: 20px 20px 20px 5px;
     border-radius: 2em;
