@@ -99,7 +99,7 @@ const Charinfo = (props) => {
 
 
   const fetchCharinfo = (e) => {
-    e.preventDefault()
+ 
     console.log('fetching?')
     fetch("http://localhost:5500/charinfo/create", {
       method: "POST",

@@ -6,10 +6,10 @@ import {ModalHover} from 'react-modal-hover';
 const CharacterComp = (props) => {
 
 
-     const getChar =() => {
+     const getChar =(sheet) => {
          
-              fetch('http://localhost:5500/charinfo/all', {
-                 method: 'GET',
+              fetch(`http://localhost:5500/charinfo/${sheet.id}`, {
+                 method: 'DELETE',
                  headers: new Headers ({
                      'Content-Type': 'application/json',
                      'Authorization': `Bearer ${props.token}`
@@ -18,11 +18,11 @@ const CharacterComp = (props) => {
              
      }
 
-useEffect(() => {
-getChar()
+// useEffect(() => {
+// getChar()
 
 
-}, [])
+// }, [])
 
 
  
@@ -34,7 +34,7 @@ getChar()
         return (
 
 <>
-<tr key={index}>
+<tr key={index.id}>
 <th scope="row">{sheet.characterName}</th>
 <td>{sheet.playerName}</td>
 <td>{sheet.alignment}</td>
@@ -47,25 +47,23 @@ getChar()
 <td>{sheet.height}</td>
 <td>{sheet.weight}</td>
 <td>{sheet.physicalDescription}</td>
+<th scope="row">{sheet.acItem}</th>
+<td>{sheet.acItemTwo}</td>
+<td>{sheet.acItemThree}</td>
+<td>{sheet.acItemFour}</td>
+<td>{sheet.acItmFive}</td>
 <td>
-<Button color="warning">Update</Button>
+<Button color="warning" >Update</Button>
 <Button color="danger">Delete</Button>
 </td>
+<th scope="row">{sheet.acItem}</th>
 </tr>
-
 </>
-
-
 
         )
       })
     
     }
-
-      
-  
-
-
     return (
         <>
         <h3> Your Characters</h3>
@@ -90,29 +88,34 @@ getChar()
       <tbody>
       {csheetMapper()}
     </tbody>
-
-
-
-
-
-
-
-
        </Table>
+       <hr />
+    <h3>AC Items</h3>
+       <Table dark>
+       <thead>
+          <tr>
+       <th>.1</th>
+       <th>.2</th>
+       <th>.3</th>
+       <th>.4</th>
+       <th>.5</th>
+       <th>.6</th>
+       </tr>
+      </thead>
+      <tbody>
+      {csheetMapper()}
+    </tbody>
 
-
-
-
-
-
-
-
-
-
-
-
+         
+       </Table>
         </>
     )
+
+
+
+
+
+
 
 
 
